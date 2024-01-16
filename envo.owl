@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="C:/Users/1milo/Desktop/Eco-ontology/Eco-ontology/envo.owl"
+         xmlns="C:/Users/1milo/Desktop/Eco-ontology/Eco-ontology/envo.owl#">
+
+<owl:Ontology rdf:about="C:/Users/1milo/Desktop/Eco-ontology/Eco-ontology/envo.owl"/>
+
+<owl:ObjectProperty rdf:about="#hasImage">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Terrene"/>
+  <rdfs:range rdf:resource="#Image"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#hasX">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:domain rdf:resource="#Terrene"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasY">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:domain rdf:resource="#Terrene"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasPercentage">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:domain rdf:resource="#Terrene"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasImageUri">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#Image"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasLongitude">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:domain rdf:resource="#Image"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasLatitude">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:domain rdf:resource="#Image"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Terrene">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Image">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Empty">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Vegetation">
+  <rdfs:subClassOf rdf:resource="#Terrene"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Soil">
+  <rdfs:subClassOf rdf:resource="#Terrene"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Liquid">
+  <rdfs:subClassOf rdf:resource="#Terrene"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TreeCanopy">
+  <rdfs:subClassOf rdf:resource="#Vegetation"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Water">
+  <rdfs:subClassOf rdf:resource="#Liquid"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Rock">
+  <rdfs:subClassOf rdf:resource="#Soil"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Dirt">
+  <rdfs:subClassOf rdf:resource="#Soil"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Waterlilly">
+  <rdfs:subClassOf rdf:resource="#Vegetation"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Swamp">
+  <rdfs:subClassOf rdf:resource="#Liquid"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grass">
+  <rdfs:subClassOf rdf:resource="#Vegetation"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sand">
+  <rdfs:subClassOf rdf:resource="#Soil"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#GP3_orto_C2.png">
+  <rdf:type rdf:resource="#Image"/>
+  <hasLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.3</hasLatitude>
+  <hasLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42.3</hasLongitude>
+  <hasImageUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C:\Users\1milo\Desktop\Eco-ontology\Eco-ontology\GP3_orto_C2.png</hasImageUri>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#croped_images\GP3_orto_C2-0-0.png_0_0_water">
+  <rdf:type rdf:resource="#Water"/>
+  <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasX>
+  <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasY>
+  <hasPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.03</hasPercentage>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#croped_images\GP3_orto_C2-0-0.png_0_0_rock">
+  <rdf:type rdf:resource="#Rock"/>
+  <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasX>
+  <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasY>
+  <hasPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.47</hasPercentage>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#croped_images\GP3_orto_C2-0-0.png_0_0_waterlilly">
+  <rdf:type rdf:resource="#Waterlilly"/>
+  <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasX>
+  <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasY>
+  <hasPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.48</hasPercentage>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#croped_images\GP3_orto_C2-0-0.png_0_0_grass">
+  <rdf:type rdf:resource="#Grass"/>
+  <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasX>
+  <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasY>
+  <hasPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.02</hasPercentage>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#croped_images\GP3_orto_C2-0-1024.png_0_1024_water">
+  <rdf:type rdf:resource="#Water"/>
+  <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasX>
+  <hasPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.03</hasPercentage>
+  <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1024</hasY>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#croped_images\GP3_orto_C2-0-1024.png_0_1024_rock">
+  <rdf:type rdf:resource="#Rock"/>
+  <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasX>
+  <hasPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.47</hasPercentage>
+  <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1024</hasY>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#croped_images\GP3_orto_C2-0-1024.png_0_1024_waterlilly">
+  <rdf:type rdf:resource="#Waterlilly"/>
+  <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasX>
+  <hasPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.48</hasPercentage>
+  <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1024</hasY>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#croped_images\GP3_orto_C2-0-1024.png_0_1024_grass">
+  <rdf:type rdf:resource="#Grass"/>
+  <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasX>
+  <hasPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.02</hasPercentage>
+  <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1024</hasY>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#croped_images\GP3_orto_C2-0-10240.png_0_10240_water">
+  <rdf:type rdf:resource="#Water"/>
+  <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasX>
+  <hasPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</hasPercentage>
+  <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10240</hasY>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#croped_images\GP3_orto_C2-0-10752.png_0_10752_water">
+  <rdf:type rdf:resource="#Water"/>
+  <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasX>
+  <hasPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</hasPercentage>
+  <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10752</hasY>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#croped_images\GP3_orto_C2-0-11264.png_0_11264_water">
+  <rdf:type rdf:resource="#Water"/>
+  <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasX>
+  <hasPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</hasPercentage>
+  <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11264</hasY>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#croped_images\GP3_orto_C2-0-11776.png_0_11776_water">
+  <rdf:type rdf:resource="#Water"/>
+  <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasX>
+  <hasPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</hasPercentage>
+  <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11776</hasY>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#croped_images\GP3_orto_C2-0-12288.png_0_12288_water">
+  <rdf:type rdf:resource="#Water"/>
+  <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasX>
+  <hasPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</hasPercentage>
+  <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12288</hasY>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#croped_images\GP3_orto_C2-0-12800.png_0_12800_water">
+  <rdf:type rdf:resource="#Water"/>
+  <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasX>
+  <hasPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">98.37</hasPercentage>
+  <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12800</hasY>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#croped_images\GP3_orto_C2-0-12800.png_0_12800_none">
+  <rdf:type rdf:resource="#Empty"/>
+  <hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasX>
+  <hasPercentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.63</hasPercentage>
+  <hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12800</hasY>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

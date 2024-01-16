@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Individuals Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 800px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin-top: 20px; /* Added margin at the top */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #results {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        #results h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        #results p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">
+        <button type="button">Image Prediction</button>
+    </a>
+    <h1>Get Individuals Form</h1>
+
+</br>
+<form id="getIndividualsForm" action="/get_individuals" method="GET">
+        <label for="image_name">Image Name:</label>
+        <input type="text" id="image_name" name="image_name" placeholder="Image Name Placeholder">
+
+        <label for="class_name">Class Name:</label>
+        <input type="text" id="class_name" name="class_name" placeholder="Class Name Placeholder">
+
+        <label for="x1">X1:</label>
+        <input type="number" id="x1" name="x1" placeholder="0">
+
+        <label for="y1">Y1:</label>
+        <input type="number" id="y1" name="y1" placeholder="0">
+
+        <label for="x2">X2:</label>
+        <input type="number" id="x2" name="x2" placeholder="1000000">
+
+        <label for="y2">Y2:</label>
+        <input type="number" id="y2" name="y2" placeholder="1000000">
+
+        <label for="min_percentage">Min Percentage:</label>
+        <input type="number" id="min_percentage" name="min_percentage" placeholder="0">
+
+        <label for="max_percentage">Max Percentage:</label>
+        <input type="number" id="max_percentage" name="max_percentage" placeholder="100">
+
+        <button type="button" onclick="getIndividuals()">Get Individuals</button>
+
+    </form>
+    <div id="results">
+        <h2>Results</h2>
+        <ul id="resultList"></ul>
+    </div>
+
+
+    <script>
+        function getIndividuals() {
+            const form = document.getElementById('getIndividualsForm');
+            const formData = new FormData(form);
+        
+            const urlSearchParams = new URLSearchParams(formData);
+            const queryString = urlSearchParams.toString();
+        
+            fetch(`/get_individuals?${queryString}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+            })
+            .then(response => response.json())
+            .then(data => {
+                const resultList = document.getElementById('resultList');
+                resultList.innerHTML = ''; // Clear previous results
+        
+                if ('results' in data) {
+                    const results = data.results;
+                    results.forEach(result => {
+                        const listItem = document.createElement('li');
+                        listItem.innerHTML = `
+                            <strong>Class:</strong> ${result.class}<br>
+                            <strong>X:</strong> ${result.x}<br>
+                            <strong>Y:</strong> ${result.y}<br>
+                            <strong>Percentage:</strong> ${result.percentage}<br>
+                            <strong>Image:</strong> ${result.image}<br>
+                            <hr>
+                        `;
+                        resultList.appendChild(listItem);
+                    });
+                } else {
+                    document.getElementById('results').innerHTML = '<p>No results found.</p>';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+        
+    </script>
+</body>
+</html>
