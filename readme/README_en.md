@@ -6,7 +6,7 @@ The processing begins with loading the TIFF image, followed by a preprocessing s
 
 An ontology is generated based on the obtained information, creating individuals that can be queried using SPARQL. Queries on the ontology can be executed from a web application. The third processing step is illustrated in the figure:
 
-# SLIKA arhitektura sistema dodati
+![alt text](https://github.com/YoNoSoyMarinero/EnvoOntology/blob/main/readme/web%20arch.drawio.png?raw=true)
 
 #### Dataset
 The dataset consists of a few images, each with large dimensions and resolution. These images were captured over a specific marshy area from an aircraft. Machine learning algorithms are applied to obtain information about the prevalence of the plant community in the surveyed area. The ontology is generated based on the obtained information, but more details are provided in the ontology section. For more efficient processing, the initial image is cropped to dimensions of 512x512. The resulting images are annotated using the [via-2.0.12](https://www.robots.ox.ac.uk/~vgg/software/via/) annotation tool and then fed to the model for processing.
