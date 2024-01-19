@@ -16,11 +16,10 @@ To determine the presence of a plant community in a specific area, the VGG16 mac
 
 [VGG16](https://arxiv.org/pdf/1409.1556.pdf) is a machine learning model designed for image processing, notable for winning the ImageNet 2014 competition in classification and object detection. With approximately 138 million parameters, it achieves an accuracy of 92.7% across 1000 classes. VGG16, with 16 layers, is commonly used for image classification and is easily applicable and suitable for additional training. A special feature of this model is the use of small 3x3 filters in convolutional layers, resulting in significant improvement over previous architectures. The VGG16 architecture includes 13 convolutional layers, five max-pooling layers, and three fully connected layers.
 
-# SLIKA arhitekture modela dodati
+![alt text](https://github.com/YoNoSoyMarinero/EnvoOntology/blob/main/readme/0%206VP81rFoLWp10FcG.jpg?raw=true)
 
 After the model makes predictions, it returns detected classes for the submitted image. Based on these predictions, visualizing detections is possible, as shown in the figure. 
-# SLIKA detekcije ako izgleda maska dodati
-
+![alt text](https://github.com/YoNoSoyMarinero/EnvoOntology/blob/main/readme/IMG-20231217-WA0001.jpg?raw=true)
 
 #### Ontology
 Based on the detection results, it is possible to determine the plant community represented in the image, the percentage of the plant community, and coordinates. Coordinates can be calculated based on the displacement during image cropping. Using this information and the image name, an ontology with individuals is generated. Owlready2 is used as a basis for classes, from which specific classes are taken to build the ontology. The following classes are used: 
@@ -30,7 +29,8 @@ Based on the detection results, it is possible to determine the plant community 
 #### Web app
 To facilitate querying the generated individuals, a website has been developed with a user-friendly graphical interface. Users can submit queries using a form, and the website also allows image submission for prediction.
 
-# SLIKA aplikacije dodati
+
+![alt text](https://github.com/YoNoSoyMarinero/EnvoOntology/blob/main/readme/Screenshot%20from%202024-01-19%2004-18-01.png?raw=true)
 
 #### SPARQL Query
 SPARQL is a query language used for working with RDF (Resource Description Framework) data. RDF is a standard model for data exchange on the web, often used to describe resources and their properties. SPARQL allows you to query RDF data to extract relevant information. This simple query allows searching for individuals based on the original image name, while other parameters are optional and can be entered by the user. In that case, the query returns all individuals related to the submitted image name. Additionally, it is possible to modify the class to which the plant community belongs, the coordinates of the search area, and the minimum and maximum percentage of representation of that plant species.
