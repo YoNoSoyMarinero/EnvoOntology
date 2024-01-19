@@ -31,6 +31,8 @@ To facilitate querying the generated individuals, a website has been developed w
 
 
 ![alt text](https://github.com/YoNoSoyMarinero/EnvoOntology/blob/main/readme/Screenshot%20from%202024-01-19%2004-18-01.png?raw=true)
+![alt text](https://github.com/YoNoSoyMarinero/EnvoOntology/blob/main/readme/Screenshot%20from%202024-01-19%2004-18-16.png?raw=true)
+
 
 #### SPARQL Query
 SPARQL is a query language used for working with RDF (Resource Description Framework) data. RDF is a standard model for data exchange on the web, often used to describe resources and their properties. SPARQL allows you to query RDF data to extract relevant information. This simple query allows searching for individuals based on the original image name, while other parameters are optional and can be entered by the user. In that case, the query returns all individuals related to the submitted image name. Additionally, it is possible to modify the class to which the plant community belongs, the coordinates of the search area, and the minimum and maximum percentage of representation of that plant species.
