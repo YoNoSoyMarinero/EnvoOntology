@@ -6,7 +6,8 @@ Proces obrade započinje učitavanjem tif slike, nakon toga slijedi proces predp
 Na osnovu dobijenih informacija generiše se ontologija sa individualima nad kojima je moguće raditi SPARQL upite. Upite na ontologijeom je moguće izvršavati iz web aplikacije.
 Na slici je prikazano kako treče proces obrade:
 
-# SLIKA arhitektura sistema dodati
+![alt text](https://github.com/YoNoSoyMarinero/EnvoOntology/blob/main/readme/web%20arch.drawio.png?raw=true)
+
 
 #### Skup podataka
 Skup podataka se sastoji od svega par slika. Slike su velikih dimenzija i rezolucije. Nastale su snimanjeen određenog močvarnog područja iz aviona. Nad dobijenim slikama je potrebno primjeniti algoritme mašinskog učenja kako bi sa slike dobili informacije o zastupljenosti biljne zajednice na snimanom području. Iz dobijenih informacija se na kraju generiše ontologija, ali o tome svakako više u sekciji ontologija.
@@ -18,10 +19,11 @@ Za određivanje prisustva biljne zajednice na određenom području, slici, kori�
 [VGG16](https://arxiv.org/pdf/1409.1556.pdf) je  model mašinskog učenja namjenjen za obradu slike, koji se istakao na takmičenju ImageNet 2014. sa pobjedom u klasifikaciji i detekciji objekata. Ovaj model ima oko 138 miliona parametara i postiže tačnost od 92.7% na 1000 klasa. 
 Sa 16 slojeva, VGG16 se često koristi za klasifikaciju slika i lako je primjenjiv i pogodan za dodatna treniranja. Posebna karakteristika ovog modela je korišćenje malih 3x3 filtera u konvolutivnim slojevima, čime se postiglo značajno poboljšanje u odnosu na prethodne arhitekture. Arhitektura VGG16 ima 13 konvolutivnih slojeva, pet slojeva sažimanja (max pooling), i tri potpuno povezana sloja. 
 
-# SLIKA arhitekture modela dodati
+![alt text](https://github.com/YoNoSoyMarinero/EnvoOntology/blob/main/readme/0%206VP81rFoLWp10FcG.jpg?raw=true)
+
 
 Nakon što model izvrši predikciju vrati detektovane klase za proslijeđenu sliku. Na osnovu dobijenih predikcija moguće je vizulizovati detekcije, što je i prikazano na slici. 
-# SLIKA detekcije ako izgleda maska dodati
+![alt text](https://github.com/YoNoSoyMarinero/EnvoOntology/blob/main/readme/IMG-20231217-WA0001.jpg?raw=true)
 
 
 #### Ontologija
@@ -32,7 +34,7 @@ Kada se prvi put pokrene sistem, generipše se fajl koji čuva ontologiju i defi
 #### Web app
 Kako bi olakšali postavljanja upita nad generisanim individualima, razvijena je web stranica koja uz pomoć jednostavnog grafičkog interfejsa olakšava postavljanje upita. Uz pomoć forme korisnik može postaviti upit. Takođe, omogućeno je slanje slike na predikciju putem ove web stranice.
 
-# SLIKA aplikacije dodati
+![alt text](https://github.com/YoNoSoyMarinero/EnvoOntology/blob/main/readme/Screenshot%20from%202024-01-19%2004-18-01.png?raw=true)
 
 #### SPARQL upit
 SPARQL je upitni jezik koji se koristi za rad s RDF (Resource Description Framework) podacima. RDF je standardni model za razmenu podataka na webu, često korišćen za opisivanje resursa i njihovih svojstava. SPARQL vam omogućava da postavljate upite nad RDF podacima kako biste izvukli informacije koje vas zanimaju.
