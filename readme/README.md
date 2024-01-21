@@ -34,7 +34,7 @@ Kada se prvi put pokrene sistem, generipše se fajl koji čuva ontologiju i defi
 #### Web app
 Kako bi olakšali postavljanja upita nad generisanim individualima, razvijena je web stranica koja uz pomoć jednostavnog grafičkog interfejsa olakšava postavljanje upita. Uz pomoć forme korisnik može postaviti upit. Takođe, omogućeno je slanje slike na predikciju putem ove web stranice.
 
-![alt text](https://github.com/YoNoSoyMarinero/EnvoOntology/blob/main/readme/Screenshot%20from%202024-01-19%2004-18-01.png?raw=true)
+![alt text](https://github.com/YoNoSoyMarinero/EnvoOntology/blob/main/readme/image.png?raw=true)
 
 #### SPARQL upit
 SPARQL je upitni jezik koji se koristi za rad s RDF (Resource Description Framework) podacima. RDF je standardni model za razmenu podataka na webu, često korišćen za opisivanje resursa i njihovih svojstava. SPARQL vam omogućava da postavljate upite nad RDF podacima kako biste izvukli informacije koje vas zanimaju.
